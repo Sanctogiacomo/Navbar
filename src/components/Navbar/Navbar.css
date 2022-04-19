@@ -1,0 +1,219 @@
+/* This contains the styling to the navbar of our page */
+
+.app__navbar{
+    padding: 1rem 1rem;
+    background: var(--color-grey_soft);
+    align-items: center;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    box-shadow:0px 3px 3px 0px var(--color-grey);
+
+}
+
+.app__navbar-headings h1{
+    color: var(--color-red_deep);
+    font-weight: bold;
+
+}
+.app__navbar-headings h4{
+    color: var(--color-gray);
+  
+}
+.app__navbar-sub{
+    display: flex;
+    flex:end;
+    align-items: center;
+    justify-content:center;
+
+}
+.app__navbar-sub h1{
+    margin:0 50px;
+    font-family: var(--font-base);
+}
+
+
+.app__navbar-links{
+    list-style: none;
+    display: flex;
+    flex:1;
+    justify-content:center;
+    align-items: center;
+}
+.app__navbar-links li{
+    margin:0 1rem;
+    cursor: pointer;
+   }
+
+   .app__navbar-links li:hover{
+    font-weight:bold;
+    border-bottom:2px solid var(--color-red)
+   }
+   
+.app__navbar-deco{
+  margin:0 3px;
+  align-items: center;
+}
+.message{
+    font-size: 14px;
+    margin:0 0.5rem;
+    border-radius: 50%;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-red);
+    padding:1rem;
+    box-shadow: 0 3px 3px 0 var(--color-gray);
+
+}
+.bell{
+    margin:0 0.5rem;
+    font-size: 14px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-red);
+    padding:1rem;
+    box-shadow: 0 3px 3px 0 var(--color-gray);
+
+}
+
+.app__navbar-profiler img{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    border: 1px solid var(--color-grey);
+    box-shadow: 0px 3px 3px 0px var(--color-gray);
+}
+
+
+/* The below helps the media queries for different screen sizes*/
+.app__navbar-smallscreen{
+    display:none;
+}
+
+.app__navbar-smallscreen_overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    background: var(--color-white);
+    transition:0.5s ease;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close{
+    font-size: 30px;
+    color: var(--color-red);
+    cursor:pointer;
+
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.app__navbar-smallscreen-links{
+    list-style: none;
+}
+
+.app__navbar-smallscreen-links li{
+    margin:3rem;
+    cursor:pointer;
+    color: var(--color-red);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-base);
+    list-style: none;
+    font-size: 30px;
+}
+
+.app__navbar-smallscreen-links li:hover{
+    color:var(--color-black);
+    font-weight: bold;
+}
+
+@media only screen and (max-width:2000px){
+
+}
+
+@media only screen and (max-width:1150px){
+.app__navbar-headings h1{
+    font-size:26px;
+    text-align: center;
+    align-items: center;
+}
+    .app__navbar-headings h4{
+    display:none;
+}
+     .app__navbar-deco{
+       display:flex;
+     }
+
+    
+.app__navbar-sub{
+    margin:0 30px;
+    border-left:1px solid var(--color-red);
+}
+.app__navbar-sub h1{
+    font-size:20px;
+}
+}
+
+
+@media only screen and (max-width:950px){
+    
+    .app__navbar-headings{
+      display:none;
+    }
+.app__navbar-sub{
+   margin:0 30px;
+   border-left:1px solid var(--color-red);
+}
+.app__navbar-sub h1{
+   font-size: 14px;
+}
+.app__navbar-deco{
+    display:flex;
+}
+}
+
+ @media only screen and (max-width:800px){
+    .app__navbar-smallscreen{
+        display: flex;
+    }
+    .app__navbar-headings{
+        display:none;
+    }
+    .app__navbar-links{
+        display:none;
+    }
+    .app__navbar-profiler{
+        display:none;
+    }
+.app__navbar-sub h1{
+    display:none;
+}
+.app__navbar-deco{
+    border-right: 1px solid var(--color-red);
+}
+} 
+@media only screen and (max-width:600px){
+
+    .app__navbar-links{
+        display:none;
+    }
+    
+
+    .app__navbar-headings{
+        display:none;
+    }
+    .app__navbar-sub{
+        display:none;
+    }
+    .app__navbar-smallscreen{
+        display:flex;
+    }
+
+}
